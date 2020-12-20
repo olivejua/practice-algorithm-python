@@ -14,7 +14,7 @@ class Solution:
 
         while node:
             next, node.next = node.next, prev
-            prev, node = head, next
+            prev, node = node, next
 
         return prev
 
@@ -23,7 +23,7 @@ class Solution:
         list: List = []
 
         while node:
-            list.append(node.val)
+            list.append(node)
             node = node.next
 
         return list
@@ -41,8 +41,32 @@ class Solution:
         a = self.toList(self.reverseList(l1))
         b = self.toList(self.reverseList(l2))
 
-        resultStr = int(''.join(str(e) for e in a)) + \
-                    int(''.join(str(e) for e in b))
+        resultStr = int(''.join(map(str, a))) + \
+                    int(''.join(map(str, b)))
 
-        # 최종 계산 결과 연결 리스트 변환
         return self.toReversedLinkedList(str(resultStr))
+
+
+
+
+
+class Solution2:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        root = head = ListNode(0)
+
+        carry = 0
+        while l1 or l2 or carry:
+            sum = 0
+
+            if l1:
+                sum += l1.val
+                l1 = l1.next
+            if l2:
+                sum += l2.val
+                l2 = l2.next
+
+            carry, val = divmod(carry+sum, 10)
+            head.next = ListNode(val)
+            head = head.next
+
+        return root.next
