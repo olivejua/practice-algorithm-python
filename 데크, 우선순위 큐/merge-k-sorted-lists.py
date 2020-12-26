@@ -11,7 +11,7 @@ class Solution:
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
         root = result = ListNode(None)
         heap = []
-        
+
         # 각 연결리스트의 루트를 힙에 저장
         for i in range(len(lists)):
             if lists[i]:
