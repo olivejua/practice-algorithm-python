@@ -1,5 +1,7 @@
 """
 가장 긴 노드를 출력하라
+상태값 누적 트리
+leetcode: diameter-of-binary-tree
 """
 
 class TreeNode:
