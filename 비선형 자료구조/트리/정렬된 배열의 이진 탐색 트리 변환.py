@@ -18,7 +18,7 @@ class Solution:
         if not nums:
             return None
 
-        mid = len(nums)
+        mid = len(nums) // 2
         
         # 분할 정복으로 이진 검색 결과 트리 구성
         node = TreeNode(nums[mid])
