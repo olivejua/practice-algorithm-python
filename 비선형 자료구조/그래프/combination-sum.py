@@ -1,7 +1,7 @@
 from typing import List
 
 """
-조합의 합
+조합의 힙
 """
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:

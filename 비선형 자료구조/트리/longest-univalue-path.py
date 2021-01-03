@@ -26,7 +26,7 @@ class Solution:
             else:
                 right = 0
 
-            # 왼쪽과 오른쪽 자식 노드 간 거리의 합 최댓값이 결과
+            # 왼쪽과 오른쪽 자식 노드 간 거리의 힙 최댓값이 결과
             self.result = max(self.result, left + right)
             # 자식 노드 상태값 중 큰 값 리턴
             return max(left, right)
