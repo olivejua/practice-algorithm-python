@@ -21,6 +21,7 @@ def counting_sort(a):
 
     return aux
 
+# 카운팅 정렬
 n = int(sys.stdin.readline())
 b = [0] * 10001
 for i in range(n):
