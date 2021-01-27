@@ -10,7 +10,7 @@ def solution(numbers):
             j -= 1
         i += 1
 
-    return ''.join(map(str, numbers))
+    return str(int(''.join(map(str, numbers))))
 
 print(solution([6,10,2]))
 print(solution([3,30,34,5,9]))
