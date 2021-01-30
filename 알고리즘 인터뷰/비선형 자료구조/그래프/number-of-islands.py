@@ -30,6 +30,22 @@ class Solution:
             for j in range(len(grid[0])):
                 if grid[i][j] == '1':
                     self.dfs(grid, i, j)
+                    print(grid)
                     count += 1
 
         return count
+
+grid = [
+  ["1","1","1","1","0"],
+  ["1","1","0","1","0"],
+  ["1","1","0","0","0"],
+  ["0","0","0","0","0"]
+]
+
+# grid = [
+#   ["1","1","0","0","0"],
+#   ["1","1","0","0","0"],
+#   ["0","0","1","0","0"],
+#   ["0","0","0","1","1"]
+# ]
+print(Solution().numIslands(grid))

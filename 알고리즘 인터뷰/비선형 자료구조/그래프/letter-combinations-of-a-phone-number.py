@@ -15,6 +15,7 @@ class Solution:
             for i in range(index, len(digits)):
                 # 숫자에 해당하는 모든 문자열 반복
                 for j in dic[digits[i]]:
+                    print(i, j)
                     dfs(i+1, path+j)
 
 
@@ -29,4 +30,4 @@ class Solution:
 
         return result
 
-print(Solution.letterCombinations("23"))
+print(Solution.letterCombinations("234"))
