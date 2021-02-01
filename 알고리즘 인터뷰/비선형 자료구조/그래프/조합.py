@@ -3,20 +3,19 @@ from typing import List
 
 class Solution:
     def combine(self, n: int, k: int) -> List[List[int]]:
-        results = []
+        result = []
 
-        def dfs(elements, start: int, k: int):
+        def dfs(elements, index, k):
             if k == 0:
-                results.append(elements[:])
-                print(results)
+                result.append(elements[:])
                 return
 
-            for i in range(start, n + 1):
+            for i in range(index, n+1):
                 elements.append(i)
                 dfs(elements, i+1, k-1)
                 elements.pop()
 
         dfs([], 1, k)
-        return results
+        return result
 
 print(Solution().combine(5,3))
