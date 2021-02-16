@@ -1,19 +1,19 @@
 import collections
 
 
-def solution(n, computers):
-    networks = 0
-    queue = []
-
-    while queue:
-        com = queue.pop()
-        for i in range(n):
-            if computers[i][com] == 1:
-                for j in range(n):
-
-
-
-print(solution(3, [[1, 1, 0], [1, 1, 0], [0, 0, 1]]))
+# def solution(n, computers):
+#     networks = 0
+#     queue = []
+#
+#     while queue:
+#         com = queue.pop()
+#         for i in range(n):
+#             if computers[i][com] == 1:
+#                 for j in range(n):
+#
+#
+#
+# print(solution(3, [[1, 1, 0], [1, 1, 0], [0, 0, 1]]))
 # print(solution(3, [[1, 1, 0], [1, 1, 1], [0, 1, 1]]))
 
 # n = 3
