@@ -29,7 +29,7 @@ class Solution:
 
         return root
 
-    # 반복구조로 DFS
+    # 반복구조로 그래프
     def invertTree_s3(self, root: TreeNode) -> TreeNode:
         stack = collections.deque([root])
 

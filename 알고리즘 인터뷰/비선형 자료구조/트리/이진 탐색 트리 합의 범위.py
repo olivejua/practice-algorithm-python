@@ -36,7 +36,7 @@ class Solution:
     def rangeSumBST_s3(self, root: TreeNode, L: int, R: int) -> int:
         stack, sum = [root], 0
 
-        # 스택 이용 필요한 노드 DFS 반복
+        # 스택 이용 필요한 노드 그래프 반복
         while stack:
             node = stack.pop()
             if node:
